@@ -1,0 +1,23 @@
+-- Create a database for banking system
+CREATE DATABASE BankingDB;
+
+-- Use the BankingDB database
+USE BankingDB;
+
+-- Create table for storing accounts
+CREATE TABLE Accounts (
+    account_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_number VARCHAR(20) UNIQUE NOT NULL,
+    account_holder_name VARCHAR(100) NOT NULL,
+    balance DECIMAL(15, 2) NOT NULL DEFAULT 0.00
+);
+
+-- Create table for storing transactions
+CREATE TABLE Transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_number VARCHAR(20) NOT NULL,
+    transaction_type VARCHAR(10) NOT NULL,  -- 'deposit' or 'withdrawal'
+    amount DECIMAL(15, 2) NOT NULL,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (account_number) REFERENCES Accounts(account_number)
+);
