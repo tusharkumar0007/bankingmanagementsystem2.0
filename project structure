@@ -1,0 +1,14 @@
+BankingManagementSystem/
+├── bin/                   # Compiled class files
+├── src/                   
+│   ├── com/
+│   │   ├── banking/        
+│   │   │   ├── controller/ # Controllers (handle user input and interact with the business logic)
+│   │   │   ├── dao/        # Data Access Objects (handle database operations)
+│   │   │   ├── model/      # Model (represent the business entities like Account, Transaction, etc.)
+│   │   │   ├── service/    # Services (contain business logic)
+│   │   │   └── util/       # Utility classes (helper functions, constants)
+│   └── resources/          # Configuration files (if needed, like db configuration)
+├── lib/                    # External libraries (e.g., database drivers, utility jars)
+├── README.md               # Project description
+└── build.gradle or pom.xml # Build configuration (Gradle or Maven)
