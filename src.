@@ -1,0 +1,25 @@
+package com.banking;
+
+import com.banking.model.Account;
+import com.banking.service.AccountService;
+import java.util.Scanner;
+
+public class BankingApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        AccountService accountService = new AccountService();
+
+        System.out.println("Welcome to the Banking System!");
+        System.out.print("Enter account number: ");
+        String accountNumber = scanner.nextLine();
+        System.out.print("Enter account holder's name: ");
+        String accountHolderName = scanner.nextLine();
+
+        Account account = new Account(accountNumber, accountHolderName, 0.0);
+        accountService.createAccount(account);
+
+        System.out.println("Account created successfully!");
+
+        // Further operations can go here...
+    }
+}
