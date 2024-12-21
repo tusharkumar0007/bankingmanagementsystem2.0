@@ -1,0 +1,87 @@
+<style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #1f1f1f;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #e0e0e0;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+            color: #b3b3b3;
+        }
+
+        /* Button Group Styles */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 2rem 0;
+        }
+
+        .button-group a {
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            margin: 0.5rem;
+            border: 2px solid #444;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .button-group a:hover {
+            background-color: #444;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #000;
+            color: #b3b3b3;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
