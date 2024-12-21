@@ -1,0 +1,94 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const contentArea = document.getElementById("content-area");
+
+    // Event listeners for navigation buttons
+    document.getElementById("create-account-btn").addEventListener("click", () => {
+        displayCreateAccountForm();
+    });
+
+    document.getElementById("deposit-btn").addEventListener("click", () => {
+        displayDepositForm();
+    });
+
+    document.getElementById("withdraw-btn").addEventListener("click", () => {
+        displayWithdrawForm();
+    });
+
+    document.getElementById("view-details-btn").addEventListener("click", () => {
+        displayViewDetails();
+    });
+
+    // Functions to display different forms
+    function displayCreateAccountForm() {
+        contentArea.innerHTML = `
+            <h3>Create Account</h3>
+            <form id="create-account-form">
+                <label for="account-name">Name:</label><br>
+                <input type="text" id="account-name" required><br><br>
+                <label for="initial-deposit">Initial Deposit:</label><br>
+                <input type="number" id="initial-deposit" required><br><br>
+                <button type="submit">Create Account</button>
+            </form>
+        `;
+        document.getElementById("create-account-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            const name = document.getElementById("account-name").value;
+            const deposit = document.getElementById("initial-deposit").value;
+            alert(Account created successfully for ${name} with an initial deposit of $${deposit});
+        });
+    }
+
+    function displayDepositForm() {
+        contentArea.innerHTML = `
+            <h3>Deposit Money</h3>
+            <form id="deposit-form">
+                <label for="account-id">Account ID:</label><br>
+                <input type="text" id="account-id" required><br><br>
+                <label for="deposit-amount">Deposit Amount:</label><br>
+                <input type="number" id="deposit-amount" required><br><br>
+                <button type="submit">Deposit</button>
+            </form>
+        `;
+        document.getElementById("deposit-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            const accountId = document.getElementById("account-id").value;
+            const amount = document.getElementById("deposit-amount").value;
+            alert($${amount} deposited successfully to account ID ${accountId});
+        });
+    }
+
+    function displayWithdrawForm() {
+        contentArea.innerHTML = `
+            <h3>Withdraw Money</h3>
+            <form id="withdraw-form">
+                <label for="withdraw-account-id">Account ID:</label><br>
+                <input type="text" id="withdraw-account-id" required><br><br>
+                <label for="withdraw-amount">Withdraw Amount:</label><br>
+                <input type="number" id="withdraw-amount" required><br><br>
+                <button type="submit">Withdraw</button>
+            </form>
+        `;
+        document.getElementById("withdraw-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            const accountId = document.getElementById("withdraw-account-id").value;
+            const amount = document.getElementById("withdraw-amount").value;
+            alert($${amount} withdrawn successfully from account ID ${accountId});
+        });
+    }
+
+    function displayViewDetails() {
+        contentArea.innerHTML = `
+            <h3>View Account Details</h3>
+            <form id="view-details-form">
+                <label for="details-account-id">Account ID:</label><br>
+                <input type="text" id="details-account-id" required><br><br>
+                <button type="submit">View Details</button>
+            </form>
+        `;
+        document.getElementById("view-details-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            const accountId = document.getElementById("details-account-id").value;
+            alert(Displaying details for account ID ${accountId});
+        });
+    }
+});
