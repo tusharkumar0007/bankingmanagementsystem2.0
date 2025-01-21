@@ -1,0 +1,14 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class EmployeeDAOTest {
+
+    @Test
+    public void testAddEmployee() {
+        EmployeeDAO dao = new EmployeeDAO();
+        Employee emp = new Employee(0, "John Doe", "HR", "john@example.com", 5000);
+        dao.addEmployee(emp);
+
+        assertFalse(dao.getAllEmployees().isEmpty());
+    }
+}
